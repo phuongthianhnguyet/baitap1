@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phân chia bi vào hộp</title>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Phân chia 6 viên bi vào 3 hộp</h1>
+
+  <ul id="results"></ul>
+
+  <script>
+    function phanChiaBi() {
+      const resultsElement = document.getElementById('results');
+      resultsElement.innerHTML = '';
+
+      for (let hop1 = 0; hop1 <= 6; hop1++) {
+        for (let hop2 = 0; hop2 <= 6; hop2++) {
+          for (let hop3 = 0; hop3 <= 6; hop3++) {
+            if (hop1 + hop2 + hop3 === 6) {
+              const listItem = document.createElement('li');
+              listItem.textContent = `Hộp 1: ${hop1} viên, Hộp 2: ${hop2} viên, Hộp 3: ${hop3} viên`;
+              resultsElement.appendChild(listItem);
+            }
+          }
+        }
+      }
+    }
+
+    phanChiaBi();
+  </script>
+</body>
+</html>
