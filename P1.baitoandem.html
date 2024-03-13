@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đếm Số có Chữ số 5</title>
+  <style>
+    body {
+      font-family: Times, serif, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    
+    #result {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Đếm Số có Chữ số 5</h1>
+
+  <button onclick="demSo()">Đếm</button>
+
+  <div id="result"></div>
+
+  <script>
+    function demSoCoChuSo5() {
+      const tongSoLuongSo = Math.pow(10, 4);
+      const soLuongSoKhongChua5 = Math.pow(9, 4);
+
+      const soLuongSoCoChuSo5 = tongSoLuongSo - soLuongSoKhongChua5;
+
+      return soLuongSoCoChuSo5;
+    }
+
+    function demSo() {
+      const resultElement = document.getElementById('result');
+      const result = demSoCoChuSo5();
+      resultElement.textContent = `Số lượng số có 4 chữ số có ít nhất một chữ số là 5: ${result}`;
+    }
+  </script>
+</body>
+</html>
